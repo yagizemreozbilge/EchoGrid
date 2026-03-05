@@ -1,6 +1,6 @@
-﻿namespace CalculatorLibrary {
+﻿namespace EchoGridLibrary {
 /// \brief A class for performing basic arithmetic operations.
-public class Calculator {
+public class EchoGrid {
   /// \brief Adds two integers.
   /// \param a The first integer to add.
   /// \param b The second integer to add.

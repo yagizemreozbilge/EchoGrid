@@ -424,49 +424,49 @@ dotnet --version
 ### Create Solution with Name
 
 ```batch
-dotnet new sln -n CalculatorLibrary
+dotnet new sln -n EchoGridLibrary
 ```
 
 ### Create Project Class Library with Name
 
 ```batch
-dotnet new classlib -n CalculatorLibrary
+dotnet new classlib -n EchoGridLibrary
 ```
 
 ### Add Project to Solution
 
 ```batch
- dotnet sln add CalculatorLibrary
+ dotnet sln add EchoGridLibrary
 ```
 
 ### Create XUnit Test for Project
 
 ```batch
-dotnet new xunit -n CalculatorLibrary.Tests
+dotnet new xunit -n EchoGridLibrary.Tests
 ```
 
 ### Add Project to UnitTest Dependecy
 
 ```batch
-dotnet add CalculatorLibrary.Tests/CalculatorLibrary.Tests.csproj reference CalculatorLibrary/CalculatorLibrary.csproj
+dotnet add EchoGridLibrary.Tests/EchoGridLibrary.Tests.csproj reference EchoGridLibrary/EchoGridLibrary.csproj
 ```
 
 ### Add Consol Application
 
 ```batch
-dotnet new console -n CalculatorApp
+dotnet new console -n EchoGridApp
 ```
 
 ### Add Console Application to Solution
 
 ```batch
-dotnet sln add CalculatorApp
+dotnet sln add EchoGridApp
 ```
 
 ### Add Library to Application Dependecy
 
 ```batch
-dotnet add CalculatorApp/CalculatorApp.csproj reference CalculatorLibrary/CalculatorLibrary.csproj
+dotnet add EchoGridApp/EchoGridApp.csproj reference EchoGridLibrary/EchoGridLibrary.csproj
 ```
 
 After this step commit and push your work. 
