@@ -1,47 +1,45 @@
-using NUnit.Framework;
+using Xunit;
 using EchoGridLibrary.Puzzle;
 using EchoGridLibrary.Events;
 using System.Collections.Generic;
 
 namespace EchoGridLibrary.Tests
 {
-    [TestFixture]
     public class GameLogicTests
     {
         private DoorLogic _door;
 
-        [SetUp]
-        public void Setup()
+        public GameLogicTests()
         {
             _door = new DoorLogic();
             _door.RequiredSwitchIds = new List<int> { 1, 2 };
         }
 
-        [Test]
+        [Fact]
         public void Door_Does_Not_Open_With_Single_Switch()
         {
             _door.HandleSwitchActivated(1);
-            Assert.IsFalse(_door.IsOpen);
+            Assert.False(_door.IsOpen);
         }
 
-        [Test]
+        [Fact]
         public void Door_Opens_With_All_Switches()
         {
             _door.HandleSwitchActivated(1);
             _door.HandleSwitchActivated(2);
-            Assert.IsTrue(_door.IsOpen);
+            Assert.True(_door.IsOpen);
         }
 
-        [Test]
+        [Fact]
         public void Door_Closes_When_Switch_Lost()
         {
             _door.HandleSwitchActivated(1);
             _door.HandleSwitchActivated(2);
             _door.HandleSwitchDeactivated(1);
-            Assert.IsFalse(_door.IsOpen);
+            Assert.False(_door.IsOpen);
         }
 
-        [Test]
+        [Fact]
         public void EventBus_Relays_Data_Correctly()
         {
             int receivedId = -1;
@@ -49,7 +47,7 @@ namespace EchoGridLibrary.Tests
             
             EventBus.TriggerSwitchActivated(99);
             
-            Assert.AreEqual(99, receivedId);
+            Assert.Equal(99, receivedId);
         }
     }
 }
