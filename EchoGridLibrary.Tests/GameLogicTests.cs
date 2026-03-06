@@ -113,6 +113,16 @@ namespace EchoGridLibrary.Tests
         }
 
         [Fact]
+        public void EnemyBrain_Returns_Current_When_Moving()
+        {
+            var brain = new EnemyBrain();
+            int next = brain.GetNextWaypoint(1, 4, false); // hasn't reached target
+            Assert.Equal(1, next);
+            
+            Assert.Equal(0, brain.GetNextWaypoint(0, 0, true)); // total = 0
+        }
+
+        [Fact]
         public void EnemyBrain_Increments_Waypoints_Correctly()
         {
             var brain = new EnemyBrain();
@@ -132,6 +142,26 @@ namespace EchoGridLibrary.Tests
             Assert.Equal(21, eg.Multiply(7, 3));
             Assert.Equal(2, eg.Divide(6, 3));
             Assert.Throws<DivideByZeroException>(() => eg.Divide(1, 0));
+        }
+
+        [Fact]
+        public void EventBus_Null_Safety_Check()
+        {
+            EventBus.Reset(); // No subscribers
+            EventBus.TriggerSwitchActivated(1);
+            EventBus.TriggerSwitchDeactivated(1);
+            EventBus.TriggerEchoRecorded(new List<FrameInput>());
+            // No exceptions should occur
+            Assert.True(true);
+        }
+
+        [Fact]
+        public void DoorLogic_No_Required_Switches_Opens_Instantly()
+        {
+            var door = new DoorLogic();
+            door.RequiredSwitchIds = new List<int>();
+            door.CheckDoorState();
+            Assert.True(door.IsOpen);
         }
     }
 }

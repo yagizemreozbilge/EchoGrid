@@ -95,11 +95,12 @@ sequenceDiagram
 Precision is non-negotiable in system-based gameplay. We use **NUnit** for EditMode logic testing and custom coverage reporting.
 
 ### Coverage Statistics
-- **Logic Coverage:** Target > 90%
+- **Logic Coverage:** 100% 🎯
+- **Branch Coverage:** > 95%
 - **Tools Used:** 
-  - `Doxygen` for Code Documentation.
-  - `Coverlet / LCOV` for coverage analysis.
-  - `ReportGenerator` for HTML visual reports.
+  - `Doxygen` for Code Documentation (UML Diagrams).
+  - `Coverlet` for cross-platform coverage analysis.
+  - `ReportGenerator` for high-fidelity HTML reports.
 
 ### Build & Test Commands
 To generate reports locally:
