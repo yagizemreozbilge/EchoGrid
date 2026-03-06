@@ -34,7 +34,7 @@ namespace EchoGrid.Player
             
             // We set velocity directly for snappy, tight controls 
             // but keep the Y velocity intact for gravity.
-            _rb.velocity = new Vector3(movement.x, _rb.velocity.y, movement.z);
+            _rb.linearVelocity = new Vector3(movement.x, _rb.linearVelocity.y, movement.z);
         }
 
         private void RotatePlayer()
