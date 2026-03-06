@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using EchoGrid.EchoSystem;
 
 namespace EchoGrid.Events
 {
@@ -8,8 +10,10 @@ namespace EchoGrid.Events
     {
         public static event Action<int> OnSwitchActivated;
         public static event Action<int> OnSwitchDeactivated;
+        public static event Action<List<FrameInput>> OnEchoRecorded;
 
         public static void TriggerSwitchActivated(int switchId) => OnSwitchActivated?.Invoke(switchId);
         public static void TriggerSwitchDeactivated(int switchId) => OnSwitchDeactivated?.Invoke(switchId);
+        public static void TriggerEchoRecorded(List<FrameInput> recordedData) => OnEchoRecorded?.Invoke(recordedData);
     }
 }
