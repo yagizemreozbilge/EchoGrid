@@ -7,12 +7,14 @@ using System.Collections.Generic;
 
 namespace EchoGridLibrary.Tests
 {
+    [Collection("Sequential")]
     public class GameLogicTests
     {
         private DoorLogic _door;
 
         public GameLogicTests()
         {
+            EventBus.Reset();
             _door = new DoorLogic();
             _door.RequiredSwitchIds = new List<int> { 1, 2 };
         }
@@ -119,6 +121,17 @@ namespace EchoGridLibrary.Tests
 
             next = brain.GetNextWaypoint(2, 3, true);
             Assert.Equal(0, next); // Loops back
+        }
+
+        [Fact]
+        public void EchoGrid_Arithmetic_Operations_Pass()
+        {
+            var eg = new EchoGridLibrary.EchoGrid();
+            Assert.Equal(10, eg.Add(7, 3));
+            Assert.Equal(4, eg.Subtract(7, 3));
+            Assert.Equal(21, eg.Multiply(7, 3));
+            Assert.Equal(2, eg.Divide(6, 3));
+            Assert.Throws<DivideByZeroException>(() => eg.Divide(1, 0));
         }
     }
 }

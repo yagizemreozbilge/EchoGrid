@@ -19,5 +19,15 @@ namespace EchoGridLibrary.Events
         public static void TriggerSwitchActivated(int switchId) => OnSwitchActivated?.Invoke(switchId);
         public static void TriggerSwitchDeactivated(int switchId) => OnSwitchDeactivated?.Invoke(switchId);
         public static void TriggerEchoRecorded(List<FrameInput> recordedData) => OnEchoRecorded?.Invoke(recordedData);
+
+        /// <summary>
+        /// Clears all event subscribers. Useful for unit testing.
+        /// </summary>
+        public static void Reset()
+        {
+            OnSwitchActivated = null;
+            OnSwitchDeactivated = null;
+            OnEchoRecorded = null;
+        }
     }
 }
