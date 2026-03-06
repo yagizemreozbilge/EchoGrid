@@ -2,6 +2,7 @@ using Xunit;
 using EchoGridLibrary.Puzzle;
 using EchoGridLibrary.Events;
 using EchoGridLibrary.Core;
+using EchoGridLibrary.Enemy;
 using System.Collections.Generic;
 
 namespace EchoGridLibrary.Tests
@@ -63,17 +64,6 @@ namespace EchoGridLibrary.Tests
         }
 
         [Fact]
-        public void EchoGrid_Basic_Math_Operations()
-        {
-            var calc = new EchoGrid();
-            Assert.Equal(10, calc.Add(7, 3));
-            Assert.Equal(4, calc.Subtract(7, 3));
-            Assert.Equal(21, calc.Multiply(7, 3));
-            Assert.Equal(2, calc.Divide(6, 3));
-            Assert.Throws<DivideByZeroException>(() => calc.Divide(5, 0));
-        }
-
-        [Fact]
         public void MathStructs_Constructor_Tests()
         {
             var v3 = new Vector3(1, 2, 3);
@@ -85,6 +75,50 @@ namespace EchoGridLibrary.Tests
             Assert.Equal(0f, q.x);
             Assert.Equal(0f, q.z);
             Assert.Equal(1f, q.w);
+        }
+
+        [Fact]
+        public void PressurePlate_Toggles_State_Correctly()
+        {
+            var plate = new PressurePlateLogic { SwitchId = 5 };
+            int triggeredId = -1;
+            EventBus.OnSwitchActivated += (id) => triggeredId = id;
+
+            plate.HandleEnter();
+            Assert.True(plate.IsActive);
+            Assert.Equal(5, triggeredId);
+
+            plate.HandleEnter(); // Second object
+            Assert.True(plate.IsActive);
+
+            plate.HandleExit(); // One remains
+            Assert.True(plate.IsActive);
+
+            plate.HandleExit(); // Last leaves
+            Assert.False(plate.IsActive);
+        }
+
+        [Fact]
+        public void EnemyBrain_Switches_States_Based_On_Distance()
+        {
+            var brain = new EnemyBrain { ChaseRange = 10f };
+            
+            brain.DecideState(15f); // Far
+            Assert.Equal(EnemyBrain.State.Patrolling, brain.CurrentState);
+
+            brain.DecideState(5f); // Close
+            Assert.Equal(EnemyBrain.State.Chasing, brain.CurrentState);
+        }
+
+        [Fact]
+        public void EnemyBrain_Increments_Waypoints_Correctly()
+        {
+            var brain = new EnemyBrain();
+            int next = brain.GetNextWaypoint(0, 3, true);
+            Assert.Equal(1, next);
+
+            next = brain.GetNextWaypoint(2, 3, true);
+            Assert.Equal(0, next); // Loops back
         }
     }
 }
