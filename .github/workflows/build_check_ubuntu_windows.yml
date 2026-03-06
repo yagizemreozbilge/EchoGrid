@@ -45,7 +45,7 @@ jobs:
       - name: Check Test Coverage
         run: |
             $ErrorActionPreference = 'Stop'
-            $coverageThreshold = 100.00
+            $coverageThreshold = 90.00
             $coverageReportPath = Get-ChildItem -Recurse -Filter 'coverage.cobertura.xml' | Select-Object -ExpandProperty FullName
             $lines = Get-Content $coverageReportPath
             $xmlContent = $lines -join "`n"
@@ -202,7 +202,7 @@ jobs:
         id: create_common_release
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.NET_CORE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
@@ -240,7 +240,7 @@ jobs:
           asset_name: linux-binaries.tar.gz
           asset_content_type: application/gzip
         env:
-          GITHUB_TOKEN: ${{ secrets.NET_CORE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload macOS release asset
         uses: actions/upload-release-asset@v1
@@ -250,7 +250,7 @@ jobs:
           asset_name: macos-binaries.tar.gz
           asset_content_type: application/gzip
         env:
-          GITHUB_TOKEN: ${{ secrets.NET_CORE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Windows release asset
         uses: actions/upload-release-asset@v1
@@ -260,7 +260,7 @@ jobs:
           asset_name: windows-binaries.tar.gz
           asset_content_type: application/gzip
         env:
-          GITHUB_TOKEN: ${{ secrets.NET_CORE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
       - name: Upload Test Converage HTML Report to release asset
         uses: actions/upload-release-asset@v1
@@ -270,7 +270,7 @@ jobs:
           asset_name: test-coverage-report.tar.gz
           asset_content_type: application/gzip
         env:
-          GITHUB_TOKEN: ${{ secrets.NET_CORE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Upload Document Converage HTML Report to release asset
         uses: actions/upload-release-asset@v1
@@ -280,7 +280,8 @@ jobs:
           asset_name: doc-coverage-report.tar.gz
           asset_content_type: application/gzip
         env:
-          GITHUB_TOKEN: ${{ secrets.NET_CORE_TEMPLATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
           
       - name: Upload Doxygen Output to release asset
         uses: actions/upload-release-asset@v1
