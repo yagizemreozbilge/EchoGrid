@@ -1045,3 +1045,23 @@ coverage*[.json, .xml, .info]
 # /Assets/
 # /Packages/
 
+# Also ignore for 'My project' if that's the name used
+/[Mm]y project/[Ll]ibrary/
+/[Mm]y project/[Tt]emp/
+/[Mm]y project/[Oo]bj/
+/[Mm]y project/[Bb]uild/
+/[Mm]y project/[Bb]uilds/
+/[Mm]y project/[Ll]ogs/
+/[Mm]y project/[Uu]serSettings/
+/[Mm]y project/[Mm]emoryCaptures/
+/[Mm]y project/*.csproj
+/[Mm]y project/*.unityproj
+/[Mm]y project/*.sln
+/[Mm]y project/*.suo
+/[Mm]y project/*.user
+/[Mm]y project/*.userprefs
+/[Mm]y project/.vs/
+/[Mm]y project/.idea/
+/[Mm]y project/.gradle/
+
+
