@@ -43,28 +43,30 @@ jobs:
         working-directory: ./EchoGridLibrary.Tests
 
       - name: Check Test Coverage
+        working-directory: ./EchoGridLibrary.Tests
         run: |
             $ErrorActionPreference = 'Stop'
             $coverageThreshold = 90.00
-            $coverageReportPath = Get-ChildItem -Recurse -Filter 'coverage.cobertura.xml' | Select-Object -ExpandProperty FullName
-            $lines = Get-Content $coverageReportPath
-            $xmlContent = $lines -join "`n"
-            $coverageXmlList = $xmlContent -split "<\?xml"
-            $totalLines = 0
-            $coveredLines = 0
-            foreach ($coverageXmlString in $coverageXmlList) {
-                if ($coverageXmlString.Trim() -ne '') {
-                    $coverageXmlString = "<?xml" + $coverageXmlString
-                    [xml]$coverageXml = $coverageXmlString
-                    $lineRate = $coverageXml.SelectSingleNode("//coverage").GetAttribute("line-rate")
-                    $coverage = [float]$lineRate * 100.00
-                    if ($coverage -lt $coverageThreshold) {
-                        Write-Host "Current test coverage is below the threshold of $coverageThreshold%."
-                        Write-Host "Current test coverage: $coverage%."
-                        exit 1
-                    }
+            $reports = Get-ChildItem -Path "./TestResults" -Recurse -Filter 'coverage.cobertura.xml'
+            if ($null -eq $reports -or $reports.Count -eq 0) {
+                Write-Host "No coverage.cobertura.xml found in EchoGridLibrary.Tests/TestResults!"
+                exit 1
+            }
+            foreach ($report in $reports) {
+                Write-Host "Processing report: $($report.FullName)"
+                [xml]$coverageXml = Get-Content $report.FullName -Raw
+                $lineRate = $coverageXml.coverage."line-rate"
+                if ($null -eq $lineRate) {
+                   $lineRate = $coverageXml.SelectSingleNode("//coverage").GetAttribute("line-rate")
+                }
+                $coverage = [math]::Round([float]$lineRate * 100.00, 2)
+                Write-Host "Found coverage: $coverage%"
+                if ($coverage -lt $coverageThreshold) {
+                    Write-Host "FAIL: Current test coverage ($coverage%) is below the threshold of $coverageThreshold%."
+                    exit 1
                 }
             }
+            Write-Host "SUCCESS: All coverage reports are above $coverageThreshold%."
         shell: powershell
   build:
     name: .NET Core Doxygen + Test +  Release (Windows/Linux/MacOS)
