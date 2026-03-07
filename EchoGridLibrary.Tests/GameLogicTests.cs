@@ -123,6 +123,20 @@ namespace EchoGridLibrary.Tests
         }
 
         [Fact]
+        public void EnemyBrain_Boundary_Tests()
+        {
+            var brain = new EnemyBrain { ChaseRange = 10f };
+            
+            // Exactly on the boundary
+            brain.DecideState(10f); 
+            Assert.Equal(EnemyBrain.State.Patrolling, brain.CurrentState);
+
+            // Manual state set
+            brain.CurrentState = EnemyBrain.State.Chasing;
+            Assert.Equal(EnemyBrain.State.Chasing, brain.CurrentState);
+        }
+
+        [Fact]
         public void EnemyBrain_Increments_Waypoints_Correctly()
         {
             var brain = new EnemyBrain();

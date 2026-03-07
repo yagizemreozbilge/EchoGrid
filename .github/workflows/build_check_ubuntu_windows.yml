@@ -12,7 +12,7 @@ on:
 
 jobs:
   coverage:
-    name: Check Unit Test Coverage %100
+    name: Check Unit Test Coverage %90
     runs-on: windows-latest
     permissions:
         contents: write
@@ -173,7 +173,7 @@ jobs:
           hide_complexity: true
           indicators: true
           output: both
-          thresholds: '60 80'
+          thresholds: '80 95'
        
       - name: Build mkdocs site
         run: mkdocs build
