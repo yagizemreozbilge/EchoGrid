@@ -1,4 +1,11 @@
+<div align="center">
+
+![EchoGrid Hero Logo](file:///C:/Users/yagiz/.gemini/antigravity/brain/321c3633-a822-48db-827f-09c568a64ac4/echogrid_hero_logo_1772924231908.png)
+
 # 🌐 EchoGrid: Temporal Puzzle Solvability Engine
+
+**"If a machine can remember, it can never truly be alone."**
+*A top-down sci-fi puzzle experience built on the pillars of temporal manipulation and clean system architecture.*
 
 [![Windows Build](https://img.shields.io/badge/Platform-Windows_11-blue?logo=windows&style=for-the-badge)](https://github.com/yagizemreozbilge/EchoGrid)
 [![Unity Version](https://img.shields.io/badge/Unity-6_LTS-black?logo=unity&style=for-the-badge)](https://unity.com/)
@@ -9,8 +16,9 @@
 ![Method Coverage](assets/badge_methodcoverage.svg)
 
 
-> **"If a machine can remember, it can never truly be alone."**
-> EchoGrid is a top-down sci-fi puzzle game centered around memory recording and temporal clone manipulation.
+[🚀 The Premise](#-the-premise) • [🏛️ Architecture](#%EF%B8%8F-system-architecture-solid-principles) • [📊 Schematics](#-technical-schematics-uml-diagrams) • [📈 QA & CI/CD](#-quality-assurance--coverage) • [🛠️ Setup](#%EF%B8%8F-installation--tech-stack)
+
+</div>
 
 ---
 
@@ -18,27 +26,26 @@
 You control a maintenance drone trapped inside an abandoned research facility. The facility's AI is malfunctioning, and sectors are locked behind **logic-based energy grids**. Your unique ability? **To record and replay your own existence.**
 
 ### 🛠️ Core Mechanic: The Echo Clone
-- **Record:** Press `[Space]` to record up to 5 seconds of movement and interaction.
-- **Replay:** Upon completion, a temporal "Echo" is spawned, repeating your exact actions.
-- **Simultaneity:** Use Echoes to stand on pressure plates, block lasers, and activate systems while you move freely elsewhere.
+*   **🔵 Record:** Press `[Space]` to record up to 5 seconds of movement and interaction in the local buffer.
+*   **🟣 Replay:** Upon completion, a temporal **"Echo"** is spawned, repeating your exact actions with millisecond precision.
+*   **⚡ Simultaneity:** Leverage Echoes to stand on multiple pressure plates, block lethal lasers, and sync complex system activations.
 
 ---
 
 ## 🏛️ System Architecture (SOLID Principles)
+EchoGrid is built with a focus on **Clean Code** and **Systems Thinking**, ensuring a modular, testable, and scalable codebase.
 
-EchoGrid is built with a focus on **Clean Code** and **Systems Thinking**, ensuring a modular and testable codebase.
-
-- **S (Single Responsibility):** Each script has one job. `InputHandler` reads keys, `PlayerController` moves, `EchoRecorder` manages memory.
-- **O (Open/Closed):** The `IInteractable` interface allows adding new puzzle elements (buttons, lasers, NPCs) without modifying the player's interaction code.
-- **L (Liskov Substitution):** All interactable objects can be swapped and still function with the `PlayerInteractor`.
-- **I (Interface Segregation):** Small, focused interfaces like `IInteractable` prevent fat, bloated classes.
-- **D (Dependency Inversion):** The `EventBus` decouples puzzles. A **Switch** doesn't know about a **Door**; they only talk to the central bus.
+*   **`S`ingle Responsibility:** Modular script design (e.g., `InputHandler` vs `PlayerController`).
+*   **`O`pen/Closed:** The `IInteractable` ecosystem allows for infinite puzzle elements without modifying core player logic.
+*   **`L`iskov Substitution:** Unified interaction protocol for switches, plates, and terminals.
+*   **`I`nterface Segregation:** Lean, purpose-driven interfaces (like `IInteractable`) avoid bloated class inheritance.
+*   **`D`ependency Inversion:** A central `EventBus` decouples systems—Switches don't know about Doors; they only speak to the Bus.
 
 ---
 
 ## 📊 Technical Schematics (UML Diagrams)
 
-### 🧩 Class Diagram (Architectural Overview)
+### 🧩 Class Diagram
 ```mermaid
 classDiagram
     class IInteractable {
@@ -70,7 +77,7 @@ classDiagram
     EchoRecorder ..> EventBus : Notifies Playback
 ```
 
-### ⏳ Temporal Loop (Sequence Diagram)
+### ⏳ Temporal Loop
 ```mermaid
 sequenceDiagram
     participant Player
@@ -96,31 +103,33 @@ sequenceDiagram
 
 ## 📈 Quality Assurance & Coverage
 
-Precision is non-negotiable in system-based gameplay. We use **NUnit** for EditMode logic testing and custom coverage reporting.
+Precision is non-negotiable. The project features a robust **CI/CD Pipeline** that ensures every push is verified for both logic integrity and documentation standards.
 
-### Coverage Statistics
-- **Logic Coverage:** 100% 🎯
-- **Branch Coverage:** > 95%
-- **Tools Used:** 
-  - `Doxygen` for Code Documentation (UML Diagrams).
-  - `Coverlet` for cross-platform coverage analysis.
-  - `ReportGenerator` for high-fidelity HTML reports.
+### 🛡️ Test Coverage Statistics
+-   **Logic Coverage:** `100%` 🎯 (Zero-dead-code policy for library core).
+*   **Branch Coverage:** `> 95%` (Verified decision paths).
+*   **Verification:** Powered by `xUnit` and `Coverlet`.
 
-### Build & Test Commands
-To generate reports locally:
-```batch
-7-build-app.bat
-```
+### ⚙️ Automation Stack (The CI/CD Journey)
+*   **Automated Verification:** GitHub Actions rigorously checks unit tests and coverage thresholds (90% minimal bar).
+*   **Visual Reporting:** `ReportGenerator` crafts high-fidelity HTML reports and dynamic badges.
+*   **Binary Release:** Multi-platform packaging for **Windows**, **Linux**, and **macOS** on every version tag (`v*`).
+*   **Doc-Gen:** `Doxygen` and `MkDocs` automatically sync technical documentation to the project site.
+
+> [!TIP]
+> Run the local build script `7-build-app.bat` to recreate the entire documentation suite and coverage reports on your machine.
 
 ---
 
 ## 🛠️ Installation & Tech Stack
-
-1. **Unity 6 LTS** (6000.3.10f1)
-2. **Visual Studio 2022** (v143)
-3. **.NET 7.0**
+1.  **Unity 6 LTS** (6000.3.10f1)
+2.  **Visual Studio 2022** (v143)
+3.  **.NET 7.0**
 
 [📂 Browse Source Code](c:\Users\yagiz\Desktop\Project\EchoGrid\Assets\_EchoGrid\Scripts) | [📄 View Test Reports](c:\Users\yagiz\Desktop\Project\EchoGrid\docs\coveragereport\index.html)
 
 ---
-*Developed by **Yağız Emre ÖZBİLGE** - Full-Stack Software Engineer & Systems Architecture Enthusiast.*
+<div align="center">
+    <i>Developed by <b>Yağız Emre ÖZBİLGE</b></i><br>
+    Full-Stack Software Engineer & Systems Architecture Enthusiast.
+</div>
