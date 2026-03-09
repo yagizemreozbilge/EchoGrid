@@ -1,6 +1,6 @@
 <div align="center">
 
-![EchoGrid Hero Logo](file:///C:/Users/yagiz/.gemini/antigravity/brain/321c3633-a822-48db-827f-09c568a64ac4/echogrid_hero_logo_1772924231908.png)
+
 
 # 🌐 EchoGrid: Temporal Puzzle Solvability Engine
 
