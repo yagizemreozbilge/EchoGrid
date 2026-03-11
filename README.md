@@ -134,7 +134,7 @@ Precision is critical in temporal puzzles. EchoGrid employs a modern **CI/CD Pip
 2.  **Visual Studio 2022** (v143)
 3.  **.NET 7.0 SDK**
 
-[📂 Source Code](Assets/_EchoGrid/Scripts) | [📄 Test Reports](docs/coveragereport/index.html) | [🌐 Project Site](https://yagizemreozbilge.github.io/EchoGrid)
+
 
 ---
 <div align="center">
