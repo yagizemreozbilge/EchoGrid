@@ -10,6 +10,10 @@
 [![Windows Build](https://img.shields.io/badge/Platform-Windows_11-blue?logo=windows&style=for-the-badge)](https://github.com/yagizemreozbilge/EchoGrid)
 [![Unity Version](https://img.shields.io/badge/Unity-6_LTS-black?logo=unity&style=for-the-badge)](https://unity.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+![All](assets/badge_combined.svg)
+![Branch Coverage](assets/badge_branchcoverage.svg)
+![Line Coverage](assets/badge_linecoverage.svg)
+![Method Coverage](assets/badge_methodcoverage.svg)
 ![Logic Coverage](https://img.shields.io/badge/Logic_Coverage-100%25-brightgreen?style=for-the-badge)
 
 [🚀 Overview](#-the-premise) • [🏛️ Architecture](#-system-architecture) • [📊 Technical Schematics](#-technical-schematics) • [📈 QA & CI/CD](#-quality-assurance) • [🛠️ Setup](#-installation)
