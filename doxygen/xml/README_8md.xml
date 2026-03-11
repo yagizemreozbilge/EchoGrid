@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;img<sp/>src=&quot;assets/echogrid_hero_logo.png&quot;<sp/>alt=&quot;EchoGrid<sp/>Hero<sp/>Logo&quot;<sp/>width=&quot;600&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>🌐<sp/>EchoGrid:<sp/>Temporal<sp/>Solvability<sp/>Engine</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**&quot;If<sp/>a<sp/>machine<sp/>can<sp/>remember,<sp/>it<sp/>can<sp/>never<sp/>truly<sp/>be<sp/>alone.&quot;**</highlight></codeline>
+<codeline><highlight class="normal">*A<sp/>top-down<sp/>sci-fi<sp/>puzzle<sp/>experience<sp/>built<sp/>on<sp/>the<sp/>pillars<sp/>of<sp/>temporal<sp/>manipulation<sp/>and<sp/>clean<sp/>system<sp/>architecture.*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Windows<sp/>Build](https://img.shields.io/badge/Platform-Windows_11-blue?logo=windows&amp;style=for-the-badge)](https://github.com/yagizemreozbilge/EchoGrid)</highlight></codeline>
+<codeline><highlight class="normal">[![Unity<sp/>Version](https://img.shields.io/badge/Unity-6_LTS-black?logo=unity&amp;style=for-the-badge)](https://unity.com/)</highlight></codeline>
+<codeline><highlight class="normal">[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)</highlight></codeline>
+<codeline><highlight class="normal">![All](assets/badge_combined.svg)</highlight></codeline>
+<codeline><highlight class="normal">![Branch<sp/>Coverage](assets/badge_branchcoverage.svg)</highlight></codeline>
+<codeline><highlight class="normal">![Line<sp/>Coverage](assets/badge_linecoverage.svg)</highlight></codeline>
+<codeline><highlight class="normal">![Method<sp/>Coverage](assets/badge_methodcoverage.svg)</highlight></codeline>
+<codeline><highlight class="normal">![Logic<sp/>Coverage](https://img.shields.io/badge/Logic_Coverage-100%25-brightgreen?style=for-the-badge)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[🚀<sp/>Overview](#-the-premise)<sp/>•<sp/>[🏛️<sp/>Architecture](#-system-architecture)<sp/>•<sp/>[📊<sp/>Technical<sp/>Schematics](#-technical-schematics)<sp/>•<sp/>[📈<sp/>QA<sp/>&amp;<sp/>CI/CD](#-quality-assurance)<sp/>•<sp/>[🛠️<sp/>Setup](#-installation)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>🚀<sp/>The<sp/>Premise</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>control<sp/>a<sp/>maintenance<sp/>drone<sp/>trapped<sp/>inside<sp/>an<sp/>abandoned<sp/>research<sp/>facility.<sp/>The<sp/>facility&apos;s<sp/>AI<sp/>is<sp/>malfunctioning,<sp/>and<sp/>sectors<sp/>are<sp/>locked<sp/>behind<sp/>**logic-based<sp/>energy<sp/>grids**.<sp/>Your<sp/>unique<sp/>ability?<sp/>**To<sp/>record<sp/>and<sp/>replay<sp/>your<sp/>own<sp/>existence.**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>🛠️<sp/>Core<sp/>Mechanic:<sp/>The<sp/>Echo<sp/>Replication</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**🔵<sp/>Record:**<sp/>Press<sp/>`[Space]`<sp/>to<sp/>initialize<sp/>a<sp/>5-second<sp/>temporal<sp/>window.<sp/>All<sp/>movements<sp/>and<sp/>interactions<sp/>are<sp/>cached.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**🟣<sp/>Replay:**<sp/>Upon<sp/>completion,<sp/>a<sp/>**Temporal<sp/>Echo**<sp/>is<sp/>spawned—a<sp/>precise<sp/>replica<sp/>of<sp/>your<sp/>past<sp/>self.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**⚡<sp/>Simultaneity:**<sp/>Leverage<sp/>Echoes<sp/>to<sp/>stand<sp/>on<sp/>multiple<sp/>pressure<sp/>plates,<sp/>block<sp/>lethal<sp/>lasers,<sp/>and<sp/>sync<sp/>complex<sp/>system<sp/>activations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>🏛️<sp/>System<sp/>Architecture</highlight></codeline>
+<codeline><highlight class="normal">EchoGrid<sp/>is<sp/>built<sp/>with<sp/>**S.O.L.I.D.**<sp/>principles<sp/>at<sp/>its<sp/>core,<sp/>ensuring<sp/>a<sp/>modular,<sp/>testable,<sp/>and<sp/>scalable<sp/>framework<sp/>for<sp/>complex<sp/>puzzle<sp/>mechanics.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**`S`ingle<sp/>Responsibility:**<sp/>Dedicated<sp/>modules<sp/>for<sp/>Input,<sp/>Recording,<sp/>and<sp/>Interaction.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**`O`pen/Closed:**<sp/>The<sp/>`IInteractable`<sp/>system<sp/>allows<sp/>adding<sp/>new<sp/>puzzle<sp/>elements<sp/>without<sp/>modifying<sp/>core<sp/>player<sp/>logic.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**`L`iskov<sp/>Substitution:**<sp/>Unified<sp/>interaction<sp/>protocol<sp/>for<sp/>all<sp/>grid<sp/>elements<sp/>(Switches,<sp/>Plates,<sp/>Terminals).</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**`I`nterface<sp/>Segregation:**<sp/>Lean<sp/>interfaces<sp/>like<sp/>`IInteractable`<sp/>keep<sp/>the<sp/>system<sp/>decoupled<sp/>and<sp/>clean.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**`D`ependency<sp/>Inversion:**<sp/>A<sp/>central<sp/>`EventBus`<sp/>manages<sp/>system<sp/>communication,<sp/>preventing<sp/>spaghetti<sp/>dependencies.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>📊<sp/>Technical<sp/>Schematics</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>🧩<sp/>High-Level<sp/>Class<sp/>Hierarchy</highlight></codeline>
+<codeline><highlight class="normal">```mermaid</highlight></codeline>
+<codeline><highlight class="normal">classDiagram</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>direction<sp/>TB</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>IInteractable<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;interface&gt;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+bool<sp/>IsInteractable</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Interact(PlayerController<sp/>player)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>Switch<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+int<sp/>switchId</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Interact(PlayerController<sp/>player)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>PressurePlate<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+int<sp/>plateId</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+OnTriggerEnter()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>EventBus<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;static&gt;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Action~int~<sp/>OnSwitchActivated</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Action~List~FrameData~~<sp/>OnEchoRecorded</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>EchoRecorder<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-List~FrameData~<sp/>_recordBuffer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+StartRecording()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+StopRecording()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>EchoClone<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Initialize(List~FrameData~<sp/>data)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+PlayNextFrame()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IInteractable<sp/>&lt;|..<sp/>Switch<sp/>:<sp/>Realizes</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IInteractable<sp/>&lt;|..<sp/>PressurePlate<sp/>:<sp/>Realizes</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Switch<sp/>..&gt;<sp/>EventBus<sp/>:<sp/>Publishes<sp/>Event</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>PressurePlate<sp/>..&gt;<sp/>EventBus<sp/>:<sp/>Publishes<sp/>Event</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EchoRecorder<sp/>..&gt;<sp/>EventBus<sp/>:<sp/>Notifies<sp/>Playback</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EventBus<sp/>&lt;..<sp/>EchoClone<sp/>:<sp/>Spawned<sp/>via<sp/>Event</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>⏳<sp/>The<sp/>Echo<sp/>Lifecycle</highlight></codeline>
+<codeline><highlight class="normal">```mermaid</highlight></codeline>
+<codeline><highlight class="normal">sequenceDiagram</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>P<sp/>as<sp/>Player</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>R<sp/>as<sp/>EchoRecorder</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>B<sp/>as<sp/>EventBus</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>C<sp/>as<sp/>EchoClone</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>P-&gt;&gt;R:<sp/>Trigger<sp/>Start<sp/>(Input)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>note<sp/>over<sp/>R:<sp/>Buffer<sp/>data<sp/>for<sp/>5s</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>R--&gt;&gt;R:<sp/>Cache<sp/>Transform<sp/>&amp;<sp/>Input</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>R-&gt;&gt;B:<sp/>Broadcast<sp/>OnEchoRecorded(buffer)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>B-&gt;&gt;C:<sp/>Instantiate<sp/>Clone</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>activate<sp/>C</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>loop<sp/>Replay<sp/>Frames</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>C-&gt;&gt;C:<sp/>Apply<sp/>Cached<sp/>TransformData</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>C-&gt;&gt;C:<sp/>Execute<sp/>Self-Destruct</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>deactivate<sp/>C</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>📈<sp/>Quality<sp/>Assurance<sp/>&amp;<sp/>CI/CD</highlight></codeline>
+<codeline><highlight class="normal">Precision<sp/>is<sp/>critical<sp/>in<sp/>temporal<sp/>puzzles.<sp/>EchoGrid<sp/>employs<sp/>a<sp/>modern<sp/>**CI/CD<sp/>Pipeline**<sp/>to<sp/>maintain<sp/>high<sp/>standards.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>🛡️<sp/>Test<sp/>Metrics</highlight></codeline>
+<codeline><highlight class="normal">-<sp/><sp/><sp/>**Logic<sp/>Coverage:**<sp/>`100%`<sp/>🎯<sp/>(Core<sp/>library<sp/>logic).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/><sp/><sp/>**Branch<sp/>Coverage:**<sp/>`&gt;<sp/>95%`<sp/>(Verified<sp/>decision<sp/>logic).</highlight></codeline>
+<codeline><highlight class="normal">-<sp/><sp/><sp/>**Framework:**<sp/>Powered<sp/>by<sp/>`xUnit`,<sp/>`Coverlet`,<sp/>and<sp/>`ReportGenerator`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>⚙️<sp/>Automation<sp/>Stack</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**GitHub<sp/>Actions:**<sp/>Rigorous<sp/>verification<sp/>on<sp/>every<sp/>pull<sp/>request.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**Visual<sp/>Reports:**<sp/>High-fidelity<sp/>HTML<sp/>reports<sp/>generated<sp/>automatically.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**Multi-Platform<sp/>Artifacts:**<sp/>Automated<sp/>builds<sp/>for<sp/>Windows,<sp/>Linux,<sp/>and<sp/>MacOS.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/><sp/><sp/>**Documentation:**<sp/>Technical<sp/>docs<sp/>synced<sp/>via<sp/>`Doxygen`<sp/>and<sp/>`MkDocs`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>🛠️<sp/>Installation<sp/>&amp;<sp/>Requirements</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/><sp/>**Unity<sp/>6<sp/>LTS**<sp/>(6000.3.10f1)</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/><sp/>**Visual<sp/>Studio<sp/>2022**<sp/>(v143)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/><sp/>**.NET<sp/>7.0<sp/>SDK**</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;i&gt;Developed<sp/>by<sp/>&lt;b&gt;Yağız<sp/>Emre<sp/>ÖZBİLGE&lt;/b&gt;&lt;/i&gt;&lt;br&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Full-Stack<sp/>Software<sp/>Engineer<sp/>&amp;<sp/>Systems<sp/>Architecture<sp/>Enthusiast.</highlight></codeline>
+<codeline><highlight class="normal">&lt;/div&gt;</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_5a8f973938e55e129a7f5217d64e6a02" kind="dir">
+    <compoundname>EchoGridLibrary</compoundname>
+    <innerfile refid="EchoGrid_8cs">EchoGrid.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="EchoGridLibrary/"/>
+  </compounddef>
+</doxygen>

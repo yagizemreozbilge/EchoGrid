@@ -1,0 +1,166 @@
+\doxysection{Echo\+Grid\+Library.\+Echo\+Grid Class Reference}
+\hypertarget{classEchoGridLibrary_1_1EchoGrid}{}\label{classEchoGridLibrary_1_1EchoGrid}\index{EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}}
+
+
+A class for performing basic arithmetic operations.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEchoGridLibrary_1_1EchoGrid_a25d17cbdae0cf698f86ec8f6dd34d23b}{Add}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Adds two integers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEchoGridLibrary_1_1EchoGrid_a1c2733d46954ce8ca95dee3b13a28bf2}{Subtract}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Subtracts two integers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEchoGridLibrary_1_1EchoGrid_a68130c119df341038c44c5859bdc950a}{Multiply}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Multiplies two integers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEchoGridLibrary_1_1EchoGrid_a557979f19d25f3b4c29b2f8e3ad9072b}{Divide}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Divides two integers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for performing basic arithmetic operations. 
+
+Definition at line \mbox{\hyperlink{EchoGrid_8cs_source_l00003}{3}} of file \mbox{\hyperlink{EchoGrid_8cs_source}{Echo\+Grid.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEchoGridLibrary_1_1EchoGrid_a25d17cbdae0cf698f86ec8f6dd34d23b}\label{classEchoGridLibrary_1_1EchoGrid_a25d17cbdae0cf698f86ec8f6dd34d23b} 
+\index{EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}!Add@{Add}}
+\index{Add@{Add}!EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily int Echo\+Grid\+Library.\+Echo\+Grid.\+Add (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Adds two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer to add. \\
+\hline
+{\em b} & The second integer to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of {\itshape a} and {\itshape b}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{EchoGrid_8cs_source_l00008}{8}} of file \mbox{\hyperlink{EchoGrid_8cs_source}{Echo\+Grid.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{return}\ a\ +\ b;}
+\DoxyCodeLine{00010\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classEchoGridLibrary_1_1EchoGrid_a557979f19d25f3b4c29b2f8e3ad9072b}\label{classEchoGridLibrary_1_1EchoGrid_a557979f19d25f3b4c29b2f8e3ad9072b} 
+\index{EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}!Divide@{Divide}}
+\index{Divide@{Divide}!EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}}
+{\footnotesize\ttfamily int Echo\+Grid\+Library.\+Echo\+Grid.\+Divide (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Divides two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The numerator. \\
+\hline
+{\em b} & The denominator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of dividing {\itshape a} by {\itshape b}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Divide\+By\+Zero\+Exception} & if {\itshape b} is zero. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{EchoGrid_8cs_source_l00033}{33}} of file \mbox{\hyperlink{EchoGrid_8cs_source}{Echo\+Grid.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (b\ ==\ 0)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ DivideByZeroException();}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{return}\ a\ /\ b;}
+\DoxyCodeLine{00039\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classEchoGridLibrary_1_1EchoGrid_a68130c119df341038c44c5859bdc950a}\label{classEchoGridLibrary_1_1EchoGrid_a68130c119df341038c44c5859bdc950a} 
+\index{EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}}
+{\footnotesize\ttfamily int Echo\+Grid\+Library.\+Echo\+Grid.\+Multiply (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Multiplies two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer to multiply. \\
+\hline
+{\em b} & The second integer to multiply. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The product of {\itshape a} and {\itshape b}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{EchoGrid_8cs_source_l00024}{24}} of file \mbox{\hyperlink{EchoGrid_8cs_source}{Echo\+Grid.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{return}\ a\ *\ b;}
+\DoxyCodeLine{00026\ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classEchoGridLibrary_1_1EchoGrid_a1c2733d46954ce8ca95dee3b13a28bf2}\label{classEchoGridLibrary_1_1EchoGrid_a1c2733d46954ce8ca95dee3b13a28bf2} 
+\index{EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!EchoGridLibrary.EchoGrid@{EchoGridLibrary.EchoGrid}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}}
+{\footnotesize\ttfamily int Echo\+Grid\+Library.\+Echo\+Grid.\+Subtract (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Subtracts two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer to subtract from. \\
+\hline
+{\em b} & The second integer to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of subtracting {\itshape b} from {\itshape a}. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{EchoGrid_8cs_source_l00016}{16}} of file \mbox{\hyperlink{EchoGrid_8cs_source}{Echo\+Grid.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{return}\ a\ -\/\ b;}
+\DoxyCodeLine{00018\ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Echo\+Grid\+Library/\mbox{\hyperlink{EchoGrid_8cs}{Echo\+Grid.\+cs}}\end{DoxyCompactItemize}

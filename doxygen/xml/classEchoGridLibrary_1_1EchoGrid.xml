@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classEchoGridLibrary_1_1EchoGrid" kind="class" language="C#" prot="public">
+    <compoundname>EchoGridLibrary::EchoGrid</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEchoGridLibrary_1_1EchoGrid_1a25d17cbdae0cf698f86ec8f6dd34d23b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int EchoGridLibrary.EchoGrid.Add</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>Add</name>
+        <qualifiedname>EchoGridLibrary.EchoGrid.Add</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Adds two integers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first integer to add. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second integer to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sum of <emphasis>a</emphasis> and <emphasis>b</emphasis>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EchoGridLibrary/EchoGrid.cs" line="8" column="14" bodyfile="EchoGridLibrary/EchoGrid.cs" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classEchoGridLibrary_1_1EchoGrid_1a1c2733d46954ce8ca95dee3b13a28bf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int EchoGridLibrary.EchoGrid.Subtract</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>Subtract</name>
+        <qualifiedname>EchoGridLibrary.EchoGrid.Subtract</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Subtracts two integers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first integer to subtract from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second integer to subtract. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of subtracting <emphasis>b</emphasis> from <emphasis>a</emphasis>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EchoGridLibrary/EchoGrid.cs" line="16" column="14" bodyfile="EchoGridLibrary/EchoGrid.cs" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classEchoGridLibrary_1_1EchoGrid_1a68130c119df341038c44c5859bdc950a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int EchoGridLibrary.EchoGrid.Multiply</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>Multiply</name>
+        <qualifiedname>EchoGridLibrary.EchoGrid.Multiply</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Multiplies two integers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first integer to multiply. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second integer to multiply. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The product of <emphasis>a</emphasis> and <emphasis>b</emphasis>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EchoGridLibrary/EchoGrid.cs" line="24" column="14" bodyfile="EchoGridLibrary/EchoGrid.cs" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classEchoGridLibrary_1_1EchoGrid_1a557979f19d25f3b4c29b2f8e3ad9072b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int EchoGridLibrary.EchoGrid.Divide</definition>
+        <argsstring>(int a, int b)</argsstring>
+        <name>Divide</name>
+        <qualifiedname>EchoGridLibrary.EchoGrid.Divide</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Divides two integers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The numerator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The denominator. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of dividing <emphasis>a</emphasis> by <emphasis>b</emphasis>. </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>DivideByZeroException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if <emphasis>b</emphasis> is zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="EchoGridLibrary/EchoGrid.cs" line="33" column="14" bodyfile="EchoGridLibrary/EchoGrid.cs" bodystart="33" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class for performing basic arithmetic operations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="EchoGridLibrary/EchoGrid.cs" line="3" column="7" bodyfile="EchoGridLibrary/EchoGrid.cs" bodystart="3" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classEchoGridLibrary_1_1EchoGrid_1a25d17cbdae0cf698f86ec8f6dd34d23b" prot="public" virt="non-virtual"><scope>EchoGridLibrary::EchoGrid</scope><name>Add</name></member>
+      <member refid="classEchoGridLibrary_1_1EchoGrid_1a557979f19d25f3b4c29b2f8e3ad9072b" prot="public" virt="non-virtual"><scope>EchoGridLibrary::EchoGrid</scope><name>Divide</name></member>
+      <member refid="classEchoGridLibrary_1_1EchoGrid_1a68130c119df341038c44c5859bdc950a" prot="public" virt="non-virtual"><scope>EchoGridLibrary::EchoGrid</scope><name>Multiply</name></member>
+      <member refid="classEchoGridLibrary_1_1EchoGrid_1a1c2733d46954ce8ca95dee3b13a28bf2" prot="public" virt="non-virtual"><scope>EchoGridLibrary::EchoGrid</scope><name>Subtract</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

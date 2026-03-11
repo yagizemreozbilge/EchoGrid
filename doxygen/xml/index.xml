@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classEchoGridLibrary_1_1EchoGrid" kind="class"><name>EchoGridLibrary::EchoGrid</name>
+    <member refid="classEchoGridLibrary_1_1EchoGrid_1a25d17cbdae0cf698f86ec8f6dd34d23b" kind="function"><name>Add</name></member>
+    <member refid="classEchoGridLibrary_1_1EchoGrid_1a1c2733d46954ce8ca95dee3b13a28bf2" kind="function"><name>Subtract</name></member>
+    <member refid="classEchoGridLibrary_1_1EchoGrid_1a68130c119df341038c44c5859bdc950a" kind="function"><name>Multiply</name></member>
+    <member refid="classEchoGridLibrary_1_1EchoGrid_1a557979f19d25f3b4c29b2f8e3ad9072b" kind="function"><name>Divide</name></member>
+  </compound>
+  <compound refid="classProgram" kind="class"><name>Program</name>
+    <member refid="classProgram_1ada72f8d1518f89bc2e6ad807d5059564" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="namespaceEchoGridLibrary" kind="namespace"><name>EchoGridLibrary</name>
+  </compound>
+  <compound refid="Program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="EchoGrid_8cs" kind="file"><name>EchoGrid.cs</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dir_344f1f826208de27e60f8f99ff838216" kind="dir"><name>EchoGridApp</name>
+  </compound>
+  <compound refid="dir_5a8f973938e55e129a7f5217d64e6a02" kind="dir"><name>EchoGridLibrary</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

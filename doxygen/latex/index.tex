@@ -1,0 +1,159 @@
+\chapter{Echo\+Grid Application with Library}
+\hypertarget{index}{}\label{index}\index{EchoGrid Application with Library@{EchoGrid Application with Library}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ 
+
+
+
+\hypertarget{index_autotoc_md0}{}\doxysection{\texorpdfstring{🌐 Echo\+Grid\+: Temporal Solvability Engine}{🌐 EchoGrid: Temporal Solvability Engine}}\label{index_autotoc_md0}
+
+
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}"{}\+If a machine can remember, it can never truly be alone."{}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\itshape A top-\/down sci-\/fi puzzle experience built on the pillars of temporal manipulation and clean system architecture.}
+
+\href{https://github.com/yagizemreozbilge/EchoGrid}{\texttt{ }} \href{https://unity.com/}{\texttt{ }} \mbox{[}\mbox{]}(LICENSE)  
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{badge_combined.svg}%All
+\end{DoxyInlineImage}
+     
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{badge_branchcoverage.svg}%Branch Coverage
+\end{DoxyInlineImage}
+     
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{badge_linecoverage.svg}%Line Coverage
+\end{DoxyInlineImage}
+     
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{badge_methodcoverage.svg}%Method Coverage
+\end{DoxyInlineImage}
+    
+
+🚀 Overview • 🏛️ Architecture • 📊 Technical Schematics • 📈 QA \& CI/\+CD • 🛠️ Setup
+
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{🚀 The Premise}{🚀 The Premise}}\label{index_autotoc_md2}
+You control a maintenance drone trapped inside an abandoned research facility. The facility\textquotesingle{}s AI is malfunctioning, and sectors are locked behind {\bfseries{logic-\/based energy grids}}. Your unique ability? {\bfseries{To record and replay your own existence.}}\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{🛠️ Core Mechanic\+: The Echo Replication}{🛠️ Core Mechanic: The Echo Replication}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{🔵 Record\+:}} Press {\ttfamily \mbox{[}Space\mbox{]}} to initialize a 5-\/second temporal window. All movements and interactions are cached.
+\item {\bfseries{🟣 Replay\+:}} Upon completion, a {\bfseries{Temporal Echo}} is spawned—a precise replica of your past self.
+\item {\bfseries{⚡ Simultaneity\+:}} Leverage Echoes to stand on multiple pressure plates, block lethal lasers, and sync complex system activations.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{🏛️ System Architecture}{🏛️ System Architecture}}\label{index_autotoc_md5}
+Echo\+Grid is built with {\bfseries{S.\+O.\+L.\+I.\+D.}} principles at its core, ensuring a modular, testable, and scalable framework for complex puzzle mechanics.
+
+
+\begin{DoxyItemize}
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily S}ingle Responsibility\+:\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Dedicated modules for Input, Recording, and Interaction.
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily O}pen/\+Closed\+:\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} The {\ttfamily IInteractable} system allows adding new puzzle elements without modifying core player logic.
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily L}iskov Substitution\+:\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Unified interaction protocol for all grid elements (Switches, Plates, Terminals).
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily I}nterface Segregation\+:\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Lean interfaces like {\ttfamily IInteractable} keep the system decoupled and clean.
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}{\ttfamily D}ependency Inversion\+:\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} A central {\ttfamily Event\+Bus} manages system communication, preventing spaghetti dependencies.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{📊 Technical Schematics}{📊 Technical Schematics}}\label{index_autotoc_md7}
+\hypertarget{index_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{🧩 High-\/\+Level Class Hierarchy}{🧩 High-Level Class Hierarchy}}\label{index_autotoc_md8}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{classDiagram}
+\DoxyCodeLine{\ \ \ \ direction\ TB}
+\DoxyCodeLine{\ \ \ \ class\ IInteractable\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <<interface>>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +bool\ IsInteractable}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +Interact(PlayerController\ player)}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ class\ Switch\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +int\ switchId}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +Interact(PlayerController\ player)}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ class\ PressurePlate\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +int\ plateId}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +OnTriggerEnter()}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ class\ EventBus\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <<static>>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +Action\string~int\string~\ OnSwitchActivated}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +Action\string~List\string~FrameData\string~\string~\ OnEchoRecorded}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ class\ EchoRecorder\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ -\/List\string~FrameData\string~\ \_recordBuffer}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +StartRecording()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +StopRecording()}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ class\ EchoClone\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +Initialize(List\string~FrameData\string~\ data)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ +PlayNextFrame()}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ IInteractable\ <|..\ Switch\ :\ Realizes}
+\DoxyCodeLine{\ \ \ \ IInteractable\ <|..\ PressurePlate\ :\ Realizes}
+\DoxyCodeLine{\ \ \ \ Switch\ ..>\ EventBus\ :\ Publishes\ Event}
+\DoxyCodeLine{\ \ \ \ PressurePlate\ ..>\ EventBus\ :\ Publishes\ Event}
+\DoxyCodeLine{\ \ \ \ EchoRecorder\ ..>\ EventBus\ :\ Notifies\ Playback}
+\DoxyCodeLine{\ \ \ \ EventBus\ <..\ EchoClone\ :\ Spawned\ via\ Event}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md9}{}\doxysubsubsection{\texorpdfstring{⏳ The Echo Lifecycle}{⏳ The Echo Lifecycle}}\label{index_autotoc_md9}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sequenceDiagram}
+\DoxyCodeLine{\ \ \ \ participant\ P\ as\ Player}
+\DoxyCodeLine{\ \ \ \ participant\ R\ as\ EchoRecorder}
+\DoxyCodeLine{\ \ \ \ participant\ B\ as\ EventBus}
+\DoxyCodeLine{\ \ \ \ participant\ C\ as\ EchoClone}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ P-\/>>R:\ Trigger\ Start\ (Input)}
+\DoxyCodeLine{\ \ \ \ note\ over\ R:\ Buffer\ data\ for\ 5s}
+\DoxyCodeLine{\ \ \ \ R-\/-\/>>R:\ Cache\ Transform\ \&\ Input}
+\DoxyCodeLine{\ \ \ \ R-\/>>B:\ Broadcast\ OnEchoRecorded(buffer)}
+\DoxyCodeLine{\ \ \ \ B-\/>>C:\ Instantiate\ Clone}
+\DoxyCodeLine{\ \ \ \ activate\ C}
+\DoxyCodeLine{\ \ \ \ loop\ Replay\ Frames}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ C-\/>>C:\ Apply\ Cached\ TransformData}
+\DoxyCodeLine{\ \ \ \ end}
+\DoxyCodeLine{\ \ \ \ C-\/>>C:\ Execute\ Self-\/Destruct}
+\DoxyCodeLine{\ \ \ \ deactivate\ C}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md11}{}\doxysubsection{\texorpdfstring{📈 Quality Assurance \& CI/\+CD}{📈 Quality Assurance \& CI/CD}}\label{index_autotoc_md11}
+Precision is critical in temporal puzzles. Echo\+Grid employs a modern {\bfseries{CI/\+CD Pipeline}} to maintain high standards.\hypertarget{index_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{🛡️ Test Metrics}{🛡️ Test Metrics}}\label{index_autotoc_md12}
+
+\begin{DoxyItemize}
+\item {\bfseries{Logic Coverage\+:}} {\ttfamily 100\%} 🎯 (Core library logic).
+\item {\bfseries{Branch Coverage\+:}} {\ttfamily \texorpdfstring{$>$}{>} 95\%} (Verified decision logic).
+\item {\bfseries{Framework\+:}} Powered by {\ttfamily x\+Unit}, {\ttfamily Coverlet}, and {\ttfamily Report\+Generator}.
+\end{DoxyItemize}\hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{⚙️ Automation Stack}{⚙️ Automation Stack}}\label{index_autotoc_md13}
+
+\begin{DoxyItemize}
+\item {\bfseries{Git\+Hub Actions\+:}} Rigorous verification on every pull request.
+\item {\bfseries{Visual Reports\+:}} High-\/fidelity HTML reports generated automatically.
+\item {\bfseries{Multi-\/\+Platform Artifacts\+:}} Automated builds for Windows, Linux, and Mac\+OS.
+\item {\bfseries{Documentation\+:}} Technical docs synced via {\ttfamily Doxygen} and {\ttfamily Mk\+Docs}.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md15}{}\doxysubsection{\texorpdfstring{🛠️ Installation \& Requirements}{🛠️ Installation \& Requirements}}\label{index_autotoc_md15}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Unity 6 LTS}} (6000.\+3.\+10f1)
+\item {\bfseries{Visual Studio 2022}} (v143)
+\item \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}.NET 7.\+0 SDK\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}
+\end{DoxyEnumerate}
+
+\DoxyHorRuler{0}
+  {\itshape Developed by {\bfseries{Yağız Emre Ö\+ZBİ\+LGE}}}~\newline
+ Full-\/\+Stack Software Engineer \& Systems Architecture Enthusiast.  

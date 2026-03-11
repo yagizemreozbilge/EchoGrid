@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>EchoGrid Application with Library</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/> </para>
+<para><image type="html" name="assets/echogrid_hero_logo.png" alt="EchoGrid Hero Logo" inline="yes"></image>
+</para>
+<para></para>
+<sect1 id="index_1autotoc_md0">
+<title>🌐 EchoGrid: Temporal Solvability Engine</title>
+<para></para>
+<para>**&quot;If a machine can remember, it can never truly be alone.&quot;** <emphasis>A top-down sci-fi puzzle experience built on the pillars of temporal manipulation and clean system architecture.</emphasis></para>
+<para><ulink url="https://github.com/yagizemreozbilge/EchoGrid"><image type="html" name="https://img.shields.io/badge/Platform-Windows_11-blue?logo=windows&amp;style=for-the-badge" alt="Windows Build" inline="yes"></image>
+</ulink> <ulink url="https://unity.com/"><image type="html" name="https://img.shields.io/badge/Unity-6_LTS-black?logo=unity&amp;style=for-the-badge" alt="Unity Version" inline="yes"></image>
+</ulink> [<image type="html" name="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" inline="yes"></image>
+](LICENSE) <image type="html" name="badge_combined.svg" inline="yes">All</image>
+ <image type="latex" name="badge_combined.svg" inline="yes">All</image>
+ <image type="rtf" name="badge_combined.svg" inline="yes">All</image>
+ <image type="docbook" name="badge_combined.svg" inline="yes">All</image>
+ <image type="xml" name="badge_combined.svg" inline="yes">All</image>
+ <image type="html" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="latex" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="rtf" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="docbook" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="xml" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="html" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="latex" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="rtf" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="docbook" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="xml" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="html" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="latex" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="rtf" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="docbook" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="xml" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="html" name="https://img.shields.io/badge/Logic_Coverage-100%25-brightgreen?style=for-the-badge" alt="Logic Coverage" inline="yes"></image>
+</para>
+<para>🚀 Overview • 🏛️ Architecture • 📊 Technical Schematics • 📈 QA &amp; CI/CD • 🛠️ Setup</para>
+<para></para>
+<para><hruler/>
+</para>
+<sect2 id="index_1autotoc_md2">
+<title>🚀 The Premise</title>
+<para>You control a maintenance drone trapped inside an abandoned research facility. The facility&apos;s AI is malfunctioning, and sectors are locked behind <bold>logic-based energy grids</bold>. Your unique ability? <bold>To record and replay your own existence.</bold></para>
+<sect3 id="index_1autotoc_md3">
+<title>🛠️ Core Mechanic: The Echo Replication</title>
+<para><itemizedlist>
+<listitem><para><bold>🔵 Record:</bold> Press <computeroutput>[Space]</computeroutput> to initialize a 5-second temporal window. All movements and interactions are cached.</para>
+</listitem><listitem><para><bold>🟣 Replay:</bold> Upon completion, a <bold>Temporal Echo</bold> is spawned—a precise replica of your past self.</para>
+</listitem><listitem><para><bold>⚡ Simultaneity:</bold> Leverage Echoes to stand on multiple pressure plates, block lethal lasers, and sync complex system activations.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md5">
+<title>🏛️ System Architecture</title>
+<para>EchoGrid is built with <bold>S.O.L.I.D.</bold> principles at its core, ensuring a modular, testable, and scalable framework for complex puzzle mechanics.</para>
+<para><itemizedlist>
+<listitem><para>**<computeroutput>S</computeroutput>ingle Responsibility:** Dedicated modules for Input, Recording, and Interaction.</para>
+</listitem><listitem><para>**<computeroutput>O</computeroutput>pen/Closed:** The <computeroutput>IInteractable</computeroutput> system allows adding new puzzle elements without modifying core player logic.</para>
+</listitem><listitem><para>**<computeroutput>L</computeroutput>iskov Substitution:** Unified interaction protocol for all grid elements (Switches, Plates, Terminals).</para>
+</listitem><listitem><para>**<computeroutput>I</computeroutput>nterface Segregation:** Lean interfaces like <computeroutput>IInteractable</computeroutput> keep the system decoupled and clean.</para>
+</listitem><listitem><para>**<computeroutput>D</computeroutput>ependency Inversion:** A central <computeroutput>EventBus</computeroutput> manages system communication, preventing spaghetti dependencies.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md7">
+<title>📊 Technical Schematics</title>
+<sect3 id="index_1autotoc_md8">
+<title>🧩 High-Level Class Hierarchy</title>
+<para><programlisting filename=".mermaid"><codeline><highlight class="normal">classDiagram</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>direction<sp/>TB</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>IInteractable<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;interface&gt;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+bool<sp/>IsInteractable</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Interact(PlayerController<sp/>player)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>Switch<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+int<sp/>switchId</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Interact(PlayerController<sp/>player)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>PressurePlate<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+int<sp/>plateId</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+OnTriggerEnter()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>EventBus<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;static&gt;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Action~int~<sp/>OnSwitchActivated</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Action~List~FrameData~~<sp/>OnEchoRecorded</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>EchoRecorder<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-List~FrameData~<sp/>_recordBuffer</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+StartRecording()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+StopRecording()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>EchoClone<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+Initialize(List~FrameData~<sp/>data)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+PlayNextFrame()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IInteractable<sp/>&lt;|..<sp/>Switch<sp/>:<sp/>Realizes</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>IInteractable<sp/>&lt;|..<sp/>PressurePlate<sp/>:<sp/>Realizes</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Switch<sp/>..&gt;<sp/>EventBus<sp/>:<sp/>Publishes<sp/>Event</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>PressurePlate<sp/>..&gt;<sp/>EventBus<sp/>:<sp/>Publishes<sp/>Event</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EchoRecorder<sp/>..&gt;<sp/>EventBus<sp/>:<sp/>Notifies<sp/>Playback</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>EventBus<sp/>&lt;..<sp/>EchoClone<sp/>:<sp/>Spawned<sp/>via<sp/>Event</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="index_1autotoc_md9">
+<title>⏳ The Echo Lifecycle</title>
+<para><programlisting filename=".mermaid"><codeline><highlight class="normal">sequenceDiagram</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>P<sp/>as<sp/>Player</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>R<sp/>as<sp/>EchoRecorder</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>B<sp/>as<sp/>EventBus</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>participant<sp/>C<sp/>as<sp/>EchoClone</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>P-&gt;&gt;R:<sp/>Trigger<sp/>Start<sp/>(Input)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>note<sp/>over<sp/>R:<sp/>Buffer<sp/>data<sp/>for<sp/>5s</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>R--&gt;&gt;R:<sp/>Cache<sp/>Transform<sp/>&amp;<sp/>Input</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>R-&gt;&gt;B:<sp/>Broadcast<sp/>OnEchoRecorded(buffer)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>B-&gt;&gt;C:<sp/>Instantiate<sp/>Clone</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>activate<sp/>C</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>loop<sp/>Replay<sp/>Frames</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>C-&gt;&gt;C:<sp/>Apply<sp/>Cached<sp/>TransformData</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>C-&gt;&gt;C:<sp/>Execute<sp/>Self-Destruct</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>deactivate<sp/>C</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md11">
+<title>📈 Quality Assurance &amp; CI/CD</title>
+<para>Precision is critical in temporal puzzles. EchoGrid employs a modern <bold>CI/CD Pipeline</bold> to maintain high standards.</para>
+<sect3 id="index_1autotoc_md12">
+<title>🛡️ Test Metrics</title>
+<para><itemizedlist>
+<listitem><para><bold>Logic Coverage:</bold> <computeroutput>100%</computeroutput> 🎯 (Core library logic).</para>
+</listitem><listitem><para><bold>Branch Coverage:</bold> <computeroutput>&gt; 95%</computeroutput> (Verified decision logic).</para>
+</listitem><listitem><para><bold>Framework:</bold> Powered by <computeroutput>xUnit</computeroutput>, <computeroutput>Coverlet</computeroutput>, and <computeroutput>ReportGenerator</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="index_1autotoc_md13">
+<title>⚙️ Automation Stack</title>
+<para><itemizedlist>
+<listitem><para><bold>GitHub Actions:</bold> Rigorous verification on every pull request.</para>
+</listitem><listitem><para><bold>Visual Reports:</bold> High-fidelity HTML reports generated automatically.</para>
+</listitem><listitem><para><bold>Multi-Platform Artifacts:</bold> Automated builds for Windows, Linux, and MacOS.</para>
+</listitem><listitem><para><bold>Documentation:</bold> Technical docs synced via <computeroutput>Doxygen</computeroutput> and <computeroutput>MkDocs</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md15">
+<title>🛠️ Installation &amp; Requirements</title>
+<para><orderedlist>
+<listitem><para><bold>Unity 6 LTS</bold> (6000.3.10f1)</para>
+</listitem><listitem><para><bold>Visual Studio 2022</bold> (v143)</para>
+</listitem><listitem><para>**.NET 7.0 SDK**</para>
+</listitem></orderedlist>
+</para>
+<para><hruler/>
+  <emphasis>Developed by <bold>Yağız Emre ÖZBİLGE</bold></emphasis><linebreak/>
+ Full-Stack Software Engineer &amp; Systems Architecture Enthusiast.  </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
